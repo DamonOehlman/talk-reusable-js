@@ -1,0 +1,31 @@
+{
+    "title": "Reusable JS",
+    "template": "reveal.js",
+    "extras": [],
+    
+    "sources": [
+        "files/intro.md",
+        "files/writing-for-specific-runtimes.md",
+        "files/frameworks.md",
+        "files/package-management.md",
+        "files/versioning.md",
+        "files/tagging.md"
+    ],
+    
+    "aliases": {
+        "resources": "github://DamonOehlman/talk-resources/"
+    },
+    
+    "theme": "dark",
+    "plugins": {
+        "code": {
+            "style": "zenburn"
+        }
+    },
+    
+    "resources": [
+        "css/reveal-tweaks.css <= resources!css/reveal-tweaks.css",
+        "js/bgimage-helper.js <= resources!js/bgimage-helper.js",
+        "css/bgimage-helper.css <= resources!css/bgimage-helper.css"
+    ]
+}

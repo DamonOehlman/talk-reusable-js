@@ -1,0 +1,27 @@
+{
+  "name": "talk-reusable-js",
+  "description": "Talk on writing Reusable JS",
+  "author": "Damon Oehlman <damon.oehlman@sidelab.com>",
+  "tags": [ "javascript" ],
+  "version": "0.1.0",
+  "private": "true",
+
+  "devDependencies": {
+    "boxit": "0.3.x",
+    "jade": "0.27.x"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DamonOehlman/talk-reusable-js.git"
+  },
+  "bugs": {
+    "url": "http://github.com/DamonOehlman/talk-reusable-js/issues"
+  },
+
+  "scripts": {
+    "generate": "./node_modules/.bin/boxit --path src --output ."
+  },
+  
+  "contributors": []
+}

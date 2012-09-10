@@ -1,0 +1,147 @@
+<!doctype html>  
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Reusable JS</title>
+
+<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
+<meta name="author" content="Hakim El Hattab">
+
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/highlight.zenburn.css" /><script src="js/jquery.min.js"></script><script src="js/head.min.js"></script><link rel="stylesheet" type="text/css" href="css/main.css" /><link rel="stylesheet" type="text/css" href="css/theme/default.css" /><link rel="stylesheet" type="text/css" href="css/reveal-tweaks.css" /><link rel="stylesheet" type="text/css" href="css/bgimage-helper.css" />
+</head>
+<body>
+<div class="reveal">
+	<!-- Used to fade in a background when a specific slide state is reached -->
+	<div class="state-background"></div>
+	
+	<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+	    
+        <section >
+        	<h1>Reusable JS</h1>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>JS Runtimes are Everywhere</h2><ul><li class="fragment">So perfect platform for reuse... right?</li><li class="fragment">Yes, but...</li></ul>
+
+
+        </section>
+        
+        <section >
+        	<h2>The Enemies of Ubiquity</h2><img src="" class="fragment"/>
+
+
+        </section>
+        
+        <section >
+        	
+
+
+        </section>
+        
+        <section >
+        	<h1>Avoid</h1>
+<h2>Writing for</h2>
+<h2>Specific Runtimes</h2>
+
+
+
+        </section>
+        
+        <section >
+        	<pre><code class="javascript">var path = require('path'),
+    fs = require('fs');</pre></code>
+
+
+</p>
+
+
+
+        </section>
+        
+        <section >
+        	<h1>Avoid</h1>
+<h2>Bloated Frameworks</h2>
+
+
+
+        </section>
+        
+        <section >
+        	<h1>Embrace</h1>
+<h2>Package Management</h2>
+
+
+
+        </section>
+        
+        <section >
+        	<h1>Embrace</h1>
+<h2>Semantic Versioning</h2>
+
+
+
+        </section>
+        
+        <section >
+        	<h1>Embrace</h1>
+<h2>Tagging</h2>
+
+
+
+        </section>
+        
+	</div>
+
+	<!-- The navigational controls UI -->
+	<aside class="controls">
+		<a class="left" href="#">&#x25C4;</a>
+		<a class="right" href="#">&#x25BA;</a>
+		<a class="up" href="#">&#x25B2;</a>
+		<a class="down" href="#">&#x25BC;</a>
+	</aside>
+
+	<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+	<div class="progress"><span></span></div>
+</div>
+<script src="js/highlight.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="js/reveal.js"></script><script src="js/bgimage-helper.js"></script>
+<script>
+	// Parse the query string into a key/value object
+	var query = {};
+	location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+		query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+	} );
+
+	Reveal.initialize({
+		// Display controls in the bottom right corner
+		controls: true,
+
+		// Display a presentation progress bar
+		progress: true,
+
+		// If true; each slide will be pushed to the browser history
+		history: true,
+
+		// Loops the presentation, defaults to false
+		loop: false,
+
+		// Flags if mouse wheel navigation should be enabled
+		mouseWheel: true,
+
+		// Apply a 3D roll to links on hover
+		rollingLinks: true,
+
+		// UI style
+		theme: query.theme || 'default', // default/neon
+
+		// Transition style
+		transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+	});
+</script>
+</body>
+</html>
