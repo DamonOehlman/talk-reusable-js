@@ -1,0 +1,55 @@
+h1 Actioning
+h2 Reusability
+
+img(src="assets/images/dragoon.png").sprite
+
+---
+
+h2 My Approach to Reusability
+
+ul
+  li.fragment Follow the principles
+  li.fragment And, use a build process
+  
+---
+
+h1 Building JS
+img(src="assets/images/peasant-idle-1.png").sprite.big
+
+---
+
+h2 Building JS
+
+ul
+  li Seems a little strange at first, but pays dividends.
+  li.fragment Able to apply sensible structure to JS projects
+  li.fragment Can provide appropriate "packaging" for different module approaches (CommonJS, AMD, etc)
+  
+---md
+
+## Building JS: Tools
+
+- There are an increasing number of "native" JS tools available, some have gained traction while others have not.
+  
+  - [Ender](https://github.com/ender-js/ender)
+  - [Grunt](https://github.com/cowboy/grunt)
+  - [Volo](https://github.com/volojs/volo)
+  - [Jam](https://github.com/caolan/jam)
+  - [Yeoman](http://yeoman.io) (*wraps Grunt and others*)
+  
+- While these are all good options, none of them really ticked the boxes for me personally.
+
+---
+
+h2 Why I'm not a fan
+
+ul
+  li.fragment Current techniques of concatenation lack refinement
+  li.fragment Built as a one size fits all kind of approach (see previous notes regarding bloat)
+  
+---md
+
+## Making better and composable tools
+
+- Been quietly building tools and testing approaches over the last couple of years.
+- Originally inspired by the approach taken by [Sprockets](https://github.com/?/sprockets) which is a Ruby-based JS build tool.

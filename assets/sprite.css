@@ -1,0 +1,27 @@
+.reveal img.sprite {
+  background: none;
+  border: 0;
+  
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  
+  width: 288px;
+  height: 288px;
+  
+  image-rendering:optimizeSpeed;
+  image-rendering:-moz-crisp-edges;
+  image-rendering:-o-crisp-edges;
+  image-rendering:optimize-contrast;
+  image-rendering:-webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+.reveal img.sprite.big {
+  width: 360px;
+  height: 360px;
+}
+
+.reveal img.sprite.tight {
+  margin: 0 -100px;
+}

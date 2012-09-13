@@ -1,2 +1,0 @@
-# Embrace
-## Semantic Versioning

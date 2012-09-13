@@ -9,7 +9,7 @@
 <meta name="author" content="Hakim El Hattab">
 
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="css/highlight.zenburn.css" /><script src="js/jquery.min.js"></script><script src="js/head.min.js"></script><link rel="stylesheet" type="text/css" href="css/main.css" /><link rel="stylesheet" type="text/css" href="css/theme/default.css" /><link rel="stylesheet" type="text/css" href="css/reveal-tweaks.css" /><link rel="stylesheet" type="text/css" href="css/bgimage-helper.css" />
+<link rel="stylesheet" type="text/css" href="css/highlight.zenburn.css" /><script src="js/jquery.min.js"></script><script src="js/head.min.js"></script><link rel="stylesheet" type="text/css" href="css/main.css" /><link rel="stylesheet" type="text/css" href="css/theme/default.css" /><link rel="stylesheet" type="text/css" href="css/reveal-tweaks.css" /><link rel="stylesheet" type="text/css" href="css/bgimage-helper.css" /><link rel="stylesheet" type="text/css" href="css/sprite.css" />
 </head>
 <body>
 <div class="reveal">
@@ -20,8 +20,13 @@
 	<div class="slides">
 	    
         <section >
-        	<h1>Reusable JS</h1>
+        	<h2>The Quest for</h2><h1>Reusable JS</h1><img src="assets/images/champion-attack-1.png" class="sprite"/>
 
+
+        </section>
+        
+        <section >
+        	<h2>Why Care About Reusability?</h2><ul><li class="fragment">You generally save time in the long run</li><li class="fragment">Reusable code is generally easier to maintain</li><li class="fragment">You impact projects beyond your own</li><li class="fragment">It just makes sense...</li></ul>
 
 
         </section>
@@ -33,29 +38,435 @@
         </section>
         
         <section >
-        	<h2>The Enemies of Ubiquity</h2><img src="" class="fragment"/>
-
-
-        </section>
-        
-        <section >
-        	
-
-
-        </section>
-        
-        <section >
-        	<h1>Avoid</h1>
-<h2>Writing for</h2>
-<h2>Specific Runtimes</h2>
+        	<h2>Focus of this Talk</h2>
+<ul>
+<li><p>Primarily focused on JS reuse for the browser, as tools like <a href="http://npmjs.org/">NPM</a> have
+done a great job of this in the for node</p>
+</li>
+<li><p>Attention paid though to writing code that works across both platforms, but is <strong>not</strong> dependency free.</p>
+</li>
+</ul>
 
 
 
         </section>
         
         <section >
-        	<pre><code class="javascript">var path = require('path'),
-    fs = require('fs');</pre></code>
+        	<h1>Barriers</h1><h2>To Reusability</h2><img src="assets/images/dwarven-doors-closed.png" class="sprite"/>
+
+
+        </section>
+        
+        <section >
+        	<h1>Bloat</h1><img src="assets/images/ogre.png" class="sprite big"/>
+
+
+        </section>
+        
+        <section >
+        	<h2>Bloat</h2><ul><li>It's too easy just to put everything in a single package</li><li>Currently, we tend to use frameworks or multifunctional libraries</li><li class="fragment">But this is just a symptom of a wider problem.</li></ul>
+
+
+        </section>
+        
+        <section >
+        	<h1>Complexity</h1><img src="assets/images/enforcer.png" class="sprite big"/>
+
+
+        </section>
+        
+        <section >
+        	<h2>Complexity</h2><ul><li>Reusability != Layers of Abstraction</li></ul>
+
+
+        </section>
+        
+        <section >
+        	<h1>Obscurity</h1><img src="assets/images/adept.png" class="sprite big"/>
+
+
+        </section>
+        
+        <section >
+        	<h2>Obscurity</h2><ul><li>Finding libraries to achieve a particular outcome is very difficult.</li><li>This is also true of smaller, more obscure libraries also.</li></ul>
+
+
+        </section>
+        
+        <section >
+        	<h1>Attainability</h1><img src="assets/images/trapdoor-open.png" class="sprite big"/>
+
+
+        </section>
+        
+        <section >
+        	<h2>Attainability</h2><ul><li>Current processes for obtaining libraries are very manual.</li><li>Tools for automating downloads are very immature</li></ul>
+
+
+        </section>
+        
+        <section >
+        	<h1>Specificity</h1><img src="assets/images/yeti.png" class="sprite big"/>
+
+
+        </section>
+        
+        <section >
+        	<h2>Specificity</h2><ul><li>While JS is highly reusable, it's very easy to mix platform/environment specific features in with reusable code.</li></ul>
+
+
+        </section>
+        
+        <section >
+        	<h1>Principles</h1><h2>of Reusability</h2><img src="assets/images/white-cleric+female.png" class="sprite"/>
+
+
+        </section>
+        
+        <section >
+        	<h1>Focus</h1><img src="assets/images/elder-mage.png" class="sprite big"/>
+
+
+        </section>
+        
+        <section >
+        	<h2>Focus</h2><ul><li>Keep your libraries / packages tight.</li><li>Create libraries with a Single Reponsibility or Purpose.</li></ul>
+
+
+        </section>
+        
+        <section >
+        	<h1>Test</h1><img src="assets/images/duelist-attack.png" class="sprite big tight"/><img src="assets/images/impaler-death-8.png" class="sprite big tight"/>
+
+
+        </section>
+        
+        <section >
+        	<h2>Test</h2><ul><li>Reusing code requires trust of that code</li><li>Trust generally comes from positive reviews from others, but having a good suite of unit tests generally helps too</li><li>A good test suite makes it easier to sleep at night</li></ul>
+
+
+        </section>
+        
+        <section >
+        	<h1>Tag</h1><img src="assets/images/archer-bow.png" class="sprite big"/>
+
+
+        </section>
+        
+        <section >
+        	<h2>Tag</h2><ul><li>If you are using distributed source control then you should embrace tagging.</li><li>Tagging provides you benefits beyond source control when combined with "social coding" sites such as Github and Bitbucket.</li></ul>
+
+
+        </section>
+        
+        <section >
+        	<h1>Actioning</h1><h2>Reusability</h2><img src="assets/images/dragoon.png" class="sprite"/>
+
+
+        </section>
+        
+        <section >
+        	<h2>My Approach to Reusability</h2><ul><li class="fragment">Follow the principles</li><li class="fragment">And, use a build process</li></ul>
+
+
+        </section>
+        
+        <section >
+        	<h1>Building JS</h1><img src="assets/images/peasant-idle-1.png" class="sprite big"/>
+
+
+        </section>
+        
+        <section >
+        	<h2>Building JS</h2><ul><li>Seems a little strange at first, but pays dividends.</li><li class="fragment">Able to apply sensible structure to JS projects</li><li class="fragment">Can provide appropriate "packaging" for different module approaches (CommonJS, AMD, etc)</li></ul>
+
+
+        </section>
+        
+        <section >
+        	<h2>Building JS: Tools</h2>
+<ul>
+<li><p>There are an increasing number of &quot;native&quot; JS tools available, some have gained traction while others have not.</p>
+<ul>
+<li><a href="https://github.com/ender-js/ender">Ender</a></li>
+<li><a href="https://github.com/cowboy/grunt">Grunt</a></li>
+<li><a href="https://github.com/volojs/volo">Volo</a></li>
+<li><a href="https://github.com/caolan/jam">Jam</a></li>
+<li><a href="http://yeoman.io">Yeoman</a> (<em>wraps Grunt and others</em>)</li>
+</ul>
+</li>
+<li><p>While these are all good options, none of them really ticked the boxes for me personally.</p>
+</li>
+</ul>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>Why I'm not a fan</h2><ul><li class="fragment">Current techniques of concatenation lack refinement</li><li class="fragment">Built as a one size fits all kind of approach (see previous notes regarding bloat)</li></ul>
+
+
+        </section>
+        
+        <section >
+        	<h2>Making better and composable tools</h2>
+<ul>
+<li>Been quietly building tools and testing approaches over the last couple of years.</li>
+<li>Originally inspired by the approach taken by <a href="https://github.com/?/sprockets">Sprockets</a> which is a Ruby-based JS build tool.</li>
+</ul>
+
+
+
+        </section>
+        
+        <section >
+        	<h1>Using JS Includes</h1>
+
+
+
+        </section>
+        
+        <section >
+        	<p>Consider the following code, which provides the provides the <code>trim</code> shim for the <code>String.prototype</code>:
+
+</p>
+<pre><code class="javascript">// shim String.trim for browsers that don't support it
+if (! String.prototype.trim) {
+  String.prototype.trim = function () {
+    return this.replace(/^\s+|\s+$/g,'');
+  };
+}
+
+function sayHello(name) {
+  console.log('Hello ' + name.trim() + '!');
+}</pre></code>
+
+</p>
+<p>I&#39;m ok with doing this once, but...
+
+</p>
+
+
+
+        </section>
+        
+        <section >
+        	<p>Shouldn&#39;t we include that trim function:
+
+</p>
+<pre><code class="javascript">//= shims/string/trim.js
+
+function sayHello(name) {
+  console.log('Hello ' + name.trim() + '!');
+}</pre></code>
+
+</p>
+
+
+
+        </section>
+        
+        <section >
+        	<p>Even better how about we include that in directly from github:
+
+</p>
+<pre><code class="javascript">//= https://raw.github.com/buildjs/shims/master/string/trim.js
+
+function sayHello(name) {
+  console.log('Hello ' + name.trim() + '!');
+}</pre></code>
+
+</p>
+
+
+
+        </section>
+        
+        <section >
+        	<p>Or using a shorthand syntax:
+
+</p>
+<pre><code class="javascript">//= github://buildjs/shims/string/trim.js
+
+function sayHello(name) {
+  console.log('Hello ' + name.trim() + '!');
+}</pre></code>
+
+</p>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>Include Responsibly</h2>
+
+
+
+        </section>
+        
+        <section >
+        	<h1>Resolving Dependencies</h1>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>Dependencies != Includes</h2>
+<ul>
+<li>My personal opinion is that you shouldn&#39;t include dependencies.</li>
+<li>Including works well until you &quot;double include&quot; something that really doesn&#39;t appreciate it (e.g. eve).</li>
+</ul>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>Harmony Dependencies Syntax</h2>
+<pre><code class="javascript"> // Variant A: import URL syntax
+ import "bar.js" as Bar;
+ import y from Bar;
+ 
+ // Variant B: module = syntax
+ module Bar = "bar.js";
+ import y from Bar;</pre></code>
+
+</p>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>Dependencies Comment</h2>
+<p>I&#39;ve experimented with a simple comment syntax:
+
+</p>
+<pre><code class="javascript">// req: underscore as _, eve, mapcontrols[zoom:scale]</pre></code>
+
+</p>
+
+
+
+        </section>
+        
+        <section >
+        	<h1>Packaging FTW!</h1>
+<h2>Library Authors Can Embrace Dependencies</h2>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>Requirements Comment</h2>
+<pre><code class="javascript">// req: underscore as _
+function fong(crowd) {
+ // find valid, fongable targets
+ var targets = _.filter(crowd, function(target) {
+   return (target.name === 'Chaucer' || target.annoying) &&
+     typeof target.kick == 'function';
+ });
+
+ // kick each of the valid targets
+ _.invoke(targets, 'kick');
+
+ // return the kicked targets
+ return targets;
+}</pre></code>
+
+</p>
+<p>You can package this with Interleave:
+
+</p>
+<p><code>interleave build src/*.js --wrap</code>
+
+</p>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>Generated CommonJS</h2>
+<pre><code class="javascript">var _ = require('underscore');
+
+function fong(crowd) {
+  // find valid, fongable targets
+  var targets = _.filter(crowd, function(target) {
+    return (target.name === 'Chaucer' || target.annoying) &&
+      typeof target.kick == 'function';
+  });
+
+  // kick each of the valid targets
+  _.invoke(targets, 'kick');
+
+  // return the kicked targets
+  return targets;
+}
+
+if (typeof fong != 'undefined') {
+    module.exports = fong;
+}</pre></code>
+
+</p>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>Generated AMD</h2>
+<pre><code class="javascript">define('fong', ['underscore'], function(_) {
+    function fong(crowd) {
+      // find valid, fongable targets
+      var targets = _.filter(crowd, function(target) {
+        return (target.name === 'Chaucer' || target.annoying) &&
+          typeof target.kick == 'function';
+      });
+
+      // kick each of the valid targets
+      _.invoke(targets, 'kick');
+
+      // return the kicked targets
+      return targets;
+    }
+
+    return typeof fong != 'undefined' ? fong : undefined;
+});</pre></code>
+
+</p>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>Generated &quot;Glob&quot;</h2>
+<pre><code class="javascript">// req: underscore as _
+(function(glob) {
+    function fong(crowd) {
+      // find valid, fongable targets
+      var targets = _.filter(crowd, function(target) {
+        return (target.name === 'Chaucer' || target.annoying) &&
+          typeof target.kick == 'function';
+      });
+
+      // kick each of the valid targets
+      _.invoke(targets, 'kick');
+
+      // return the kicked targets
+      return targets;
+    }
+
+    if (typeof fong != 'undefined') {
+        glob.fong = fong;
+    }
+}(this));</pre></code>
+
 
 
 </p>
@@ -65,32 +476,15 @@
         </section>
         
         <section >
-        	<h1>Avoid</h1>
-<h2>Bloated Frameworks</h2>
+        	<h2>Thanks</h2>
+<p>Hit me up with questions:
 
-
-
-        </section>
-        
-        <section >
-        	<h1>Embrace</h1>
-<h2>Package Management</h2>
-
-
-
-        </section>
-        
-        <section >
-        	<h1>Embrace</h1>
-<h2>Semantic Versioning</h2>
-
-
-
-        </section>
-        
-        <section >
-        	<h1>Embrace</h1>
-<h2>Tagging</h2>
+</p>
+<ul>
+<li>either here</li>
+<li>or, on twitter: <a href="http://twitter.com/DamonOehlman">@DamonOehlman</a></li>
+<li>or, on github: <a href="https://github.com/DamonOehlman">https://github.com/DamonOehlman</a></li>
+</ul>
 
 
 

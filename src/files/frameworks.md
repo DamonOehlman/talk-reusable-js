@@ -1,3 +1,0 @@
-# Avoid
-## Bloated Frameworks
-

@@ -1,0 +1,1 @@
+interleave build src/*.js --wrap

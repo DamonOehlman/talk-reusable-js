@@ -4,12 +4,15 @@
     "extras": [],
     
     "sources": [
-        "files/intro.md",
-        "files/writing-for-specific-runtimes.md",
-        "files/frameworks.md",
-        "files/package-management.md",
-        "files/versioning.md",
-        "files/tagging.md"
+        "files/intro.jade",
+        "files/focus.md",
+        "files/barriers.jade",
+        "files/principles.jade",
+        "files/into-action.jade",
+        "files/build-includes.md",
+        "files/build-resolve.md",
+        "files/build-packaging.md",
+        "files/thanks.md"
     ],
     
     "aliases": {
@@ -26,6 +29,7 @@
     "resources": [
         "css/reveal-tweaks.css <= resources!css/reveal-tweaks.css",
         "js/bgimage-helper.js <= resources!js/bgimage-helper.js",
-        "css/bgimage-helper.css <= resources!css/bgimage-helper.css"
+        "css/bgimage-helper.css <= resources!css/bgimage-helper.css",
+        "css/sprite.css <= ../assets/sprite.css"
     ]
 }

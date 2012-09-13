@@ -20,7 +20,7 @@
   },
 
   "scripts": {
-    "generate": "./node_modules/.bin/boxit --path src --output ."
+    "generate": "./node_modules/.bin/boxit --output ."
   },
   
   "contributors": []
